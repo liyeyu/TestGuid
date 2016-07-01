@@ -22,6 +22,10 @@ android {
             moduleName "diff"
             abiFilters "armeabi", "armeabi-v7a", "x86"
         }
+//        jackOptions {
+//            enabled true
+//        }
+
     }
     buildTypes {
         release {
@@ -31,14 +35,6 @@ android {
         }
         debug {
             debuggable false
-        }
-        liyeyu_release {
-            debuggable false
-            jniDebuggable true
-            signingConfig signingConfigs.liyeyu
-            renderscriptDebuggable false
-            minifyEnabled false
-            zipAlignEnabled true
         }
     }
     sourceSets {
@@ -64,6 +60,10 @@ android {
 
         }
     }
+//    compileOptions {
+//        sourceCompatibility JavaVersion.VERSION_1_8
+//        targetCompatibility JavaVersion.VERSION_1_8
+//    }
 }
 
 task copyApk(type: Copy){
@@ -80,8 +80,8 @@ dependencies {
     apt 'com.jakewharton:butterknife-compiler:8.0.1'
     compile 'com.wnafee:vector-compat:1.0.5'
     compile 'com.orhanobut:logger:1.3'
-//    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
-//    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
-//    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    //    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    //    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    //    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
     compile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
 }

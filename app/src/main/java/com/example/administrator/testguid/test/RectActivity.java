@@ -21,6 +21,9 @@ import com.example.administrator.testguid.algorithm.Test1;
 import com.example.appupdatet.PathActivity;
 import com.wnafee.vector.MorphButton;
 
+import java.io.File;
+import java.io.FileFilter;
+
 public class RectActivity extends AppCompatActivity {
 
     private RelativeLayout mParent;
@@ -65,6 +68,8 @@ public class RectActivity extends AppCompatActivity {
                 testAlgorithm();
                 break;
         }
+
+        FileFilter fileFilter = (File f) -> f.isDirectory();
 
     }
 
