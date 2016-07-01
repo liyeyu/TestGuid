@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    signingConfigs {
+        liyeyu {
+            keyAlias 'liyeyu'
+            keyPassword 'liyeyu'
+            storeFile file('D:/Documents/Downloads/TestGuid/liyeyu.keystore.jks')
+            storePassword 'liyeyu'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "com.example.administrator.testguid"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "2.0"
+        ndk {
+            moduleName "diff"
+            abiFilters "armeabi", "armeabi-v7a", "x86"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+        debug {
+            debuggable false
+        }
+        liyeyu_release {
+            debuggable false
+            jniDebuggable true
+            signingConfig signingConfigs.liyeyu
+            renderscriptDebuggable false
+            minifyEnabled false
+            zipAlignEnabled true
+        }
+    }
+    sourceSets {
+        main {
+//            jni.srcDirs = ['jni']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    productFlavors {
+        xiaomi {
+            minSdkVersion 15
+            applicationId 'com.example.administrator.testguid.xiaomi'
+            targetSdkVersion 22
+            versionCode 1
+            versionName '2.1'
+        }
+        liyeyu {
+            minSdkVersion 15
+            applicationId 'com.example.administrator.testguid'
+            targetSdkVersion 23
+            versionCode 1
+            versionName '2.0'
+
+        }
+    }
+}
+
+task copyApk(type: Copy){
+        from 'D:/Documents/Downloads/TestGuid/app/build/outputs/apk/app-liyeyu-debug.apk'
+        into 'C:/Users/Administrator/Desktop/'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.jakewharton:butterknife:8.0.1'
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile 'com.wnafee:vector-compat:1.0.5'
+    compile 'com.orhanobut:logger:1.3'
+//    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+//    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+//    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    compile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+}

@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+
+    <Button
+        android:id="@+id/diff"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onclick"
+        android:text="生成差异包" />
+
+    <Button
+        android:id="@+id/add"
+         android:onClick="onclick"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="合成升级过后的包" >
+    </Button>
+
+</LinearLayout>

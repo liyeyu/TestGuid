@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">TestGuid</string>
+	<string name="title_activity_scrolling">ScrollingActivity</string>
+	<string name="large_text">abc</string>
+	<string name="action_settings">設定</string>
+	<string name="title_activity_rect">RectActivity</string>
+	<string name="key">哈哈</string>
+
+</resources>
