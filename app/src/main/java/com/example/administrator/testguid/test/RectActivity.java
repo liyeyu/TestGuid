@@ -16,13 +16,11 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.administrator.testguid.QQActivity;
 import com.example.administrator.testguid.R;
 import com.example.administrator.testguid.algorithm.Test1;
 import com.example.appupdatet.PathActivity;
 import com.wnafee.vector.MorphButton;
-
-import java.io.File;
-import java.io.FileFilter;
 
 public class RectActivity extends AppCompatActivity {
 
@@ -67,10 +65,11 @@ public class RectActivity extends AppCompatActivity {
             case 1:
                 testAlgorithm();
                 break;
+            case 2:
+                startActivity(new Intent(RectActivity.this, QQActivity.class));
+                finish();
+                break;
         }
-
-        FileFilter fileFilter = (File f) -> f.isDirectory();
-
     }
 
     private void testAlgorithm(){

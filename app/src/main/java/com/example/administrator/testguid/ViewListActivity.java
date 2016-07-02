@@ -3,7 +3,6 @@ package com.example.administrator.testguid;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
@@ -20,7 +19,7 @@ public class ViewListActivity extends AppCompatActivity {
 
     @BindView(R.id.lv_view)
     ListView mLvView;
-    private String[] views = new String[1];
+    private String[] views = new String[3];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +51,7 @@ public class ViewListActivity extends AppCompatActivity {
 
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-                Log.e("tag","firstVisibleItem "+firstVisibleItem+" visibleItemCount "+visibleItemCount+" totalItemCount "+totalItemCount);
+//                Log.e("tag","firstVisibleItem "+firstVisibleItem+" visibleItemCount "+visibleItemCount+" totalItemCount "+totalItemCount);
             }
         });
     }

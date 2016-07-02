@@ -34,7 +34,7 @@ android {
             debuggable false
         }
         debug {
-            debuggable false
+            debuggable true
         }
     }
     sourceSets {
@@ -84,4 +84,5 @@ dependencies {
     //    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
     //    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
     compile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    compile 'com.nineoldandroids:library:2.4.0'
 }

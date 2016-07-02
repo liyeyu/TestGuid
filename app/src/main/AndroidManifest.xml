@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:name="com.TestApplication"
         android:allowBackup="true"
@@ -28,6 +29,8 @@
         <activity android:name=".test.RectActivity">
         </activity>
         <activity android:name="com.example.appupdatet.PathActivity">
+        </activity>
+        <activity android:name=".QQActivity">
         </activity>
     </application>
 
