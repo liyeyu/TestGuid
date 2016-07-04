@@ -70,6 +70,7 @@ public class RectActivity extends AppCompatActivity {
                 finish();
                 break;
         }
+
     }
 
     private void testAlgorithm(){
@@ -105,7 +106,6 @@ public class RectActivity extends AppCompatActivity {
     }
 
     private void testAndroid(){
-        //        new JNITest().getText();
         try {
             mText.setText("差分升级，增量更新 version:"+getPackageManager().getPackageInfo(getPackageName(), 0).versionCode);
         } catch (PackageManager.NameNotFoundException e) {
