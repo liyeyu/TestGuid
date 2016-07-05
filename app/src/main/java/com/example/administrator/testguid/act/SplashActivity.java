@@ -1,8 +1,9 @@
-package com.example.administrator.testguid;
+package com.example.administrator.testguid.act;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.administrator.testguid.R;
 import com.example.administrator.testguid.view.parallax.ParallaxView;
 
 public class SplashActivity extends AppCompatActivity {

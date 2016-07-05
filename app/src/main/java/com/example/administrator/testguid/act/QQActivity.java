@@ -1,9 +1,10 @@
-package com.example.administrator.testguid;
+package com.example.administrator.testguid.act;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.administrator.testguid.R;
 import com.example.administrator.testguid.view.QQDrawerLayout;
 
 public class QQActivity extends AppCompatActivity {

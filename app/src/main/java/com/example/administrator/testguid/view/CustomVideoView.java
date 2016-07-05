@@ -1,4 +1,4 @@
-package com.example.administrator.testguid;
+package com.example.administrator.testguid.view;
 
 import android.content.Context;
 import android.util.AttributeSet;

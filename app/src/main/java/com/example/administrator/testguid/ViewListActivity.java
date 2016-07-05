@@ -9,7 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.administrator.testguid.test.RectActivity;
+import com.example.administrator.testguid.act.RectActivity;
 import com.orhanobut.logger.Logger;
 
 import butterknife.BindView;

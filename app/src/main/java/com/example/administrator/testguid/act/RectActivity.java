@@ -1,4 +1,4 @@
-package com.example.administrator.testguid.test;
+package com.example.administrator.testguid.act;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,7 +16,6 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.administrator.testguid.QQActivity;
 import com.example.administrator.testguid.R;
 import com.example.administrator.testguid.algorithm.Test1;
 import com.example.appupdatet.PathActivity;
