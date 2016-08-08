@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.example.administrator.testguid.R;
 import com.example.administrator.testguid.algorithm.Test1;
+import com.example.administrator.testguid.view.particle.ExplosionField;
 import com.example.appupdatet.PathActivity;
 import com.wnafee.vector.MorphButton;
 
@@ -105,6 +106,9 @@ public class RectActivity extends AppCompatActivity {
     }
 
     private void testAndroid(){
+
+        new ExplosionField(this).addListener(findViewById(R.id.riv_img));
+
         try {
             mText.setText("差分升级，增量更新 version:"+getPackageManager().getPackageInfo(getPackageName(), 0).versionCode);
         } catch (PackageManager.NameNotFoundException e) {

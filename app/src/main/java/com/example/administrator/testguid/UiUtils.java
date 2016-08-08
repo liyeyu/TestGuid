@@ -1,6 +1,7 @@
 package com.example.administrator.testguid;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
@@ -18,6 +19,9 @@ public class UiUtils {
 
     static public int dipToPx(Context context, int dip) {
         return (int) (dip * getScreenDensity(context) + 0.5f);
+    }
+    static public int dipToPx(int dip) {
+        return Math.round(dip*Resources.getSystem().getDisplayMetrics().density);
     }
 
     static public float getScreenDensity(Context context) {

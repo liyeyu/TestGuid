@@ -5,11 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.administrator.testguid.ViewListActivity">
-
+   <!-- android:animateLayoutChanges="true"
+    android:layoutAnimation="@anim/list_anim_layout"-->
     <ListView
         android:id="@+id/lv_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </ListView>
+
+    <GridView
+        android:visibility="gone"
+        android:numColumns="3"
+        android:id="@+id/gv_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"></GridView>
 
 </RelativeLayout>
